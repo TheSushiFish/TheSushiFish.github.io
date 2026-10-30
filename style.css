@@ -1,0 +1,102 @@
+/* ---------- Colors and sizes live here so you can change them in one place ---------- */
+:root {
+  --bg: #0f1115;
+  --card: #1a1d24;
+  --text: #e8eaed;
+  --muted: #9aa0a6;
+  --accent: #6ea8fe;
+  --radius: 12px;
+}
+
+/* Include padding in element widths; makes sizing predictable */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Header ---------- */
+header {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 2rem; /* top, sides, bottom */
+}
+h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+.tagline {
+  color: var(--muted);
+  font-size: 1.15rem;
+  margin: 0.25rem 0 1rem;
+}
+nav a {
+  margin-right: 1.25rem;
+  font-weight: 600;
+}
+
+/* ---------- Projects ---------- */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+h2 {
+  border-bottom: 1px solid #2a2e37;
+  padding-bottom: 0.5rem;
+}
+
+/* Grid: as many 260px+ columns as fit, each sharing leftover space equally.
+   On a phone this collapses to one column automatically. */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 1rem;
+}
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover; /* crops the image to fill the box without stretching */
+  border-radius: 8px;
+  background: #2a2e37; /* shows as a gray box if the image file is missing */
+}
+.card h3 {
+  margin: 0.75rem 0 0.25rem;
+}
+.card p {
+  margin: 0.4rem 0;
+  font-size: 0.95rem;
+}
+.links a {
+  margin-right: 1rem;
+  font-weight: 600;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  max-width: 900px;
+  margin: 3rem auto 0;
+  padding: 1.5rem;
+  color: var(--muted);
+  border-top: 1px solid #2a2e37;
+}
